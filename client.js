@@ -11,7 +11,7 @@ const connect = function () {
 
   conn.on("connect", () => {
     // code that does something when the connection is first established
-    console.log();
+    console.log("Successfully connected to game server");
   });
 
   conn.on("data", (data) => {
@@ -19,6 +19,16 @@ const connect = function () {
     console.log(data);
   });
   
+  conn.write("Name: CDE ");
+  
+  /* setInterval(() => {
+    conn.write("Move: up");
+  }, 50);
+
+  setTimeout(() => {
+    conn.write("Move: right");
+  }, 50); */
+
   return conn;
 };
 
