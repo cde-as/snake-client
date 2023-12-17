@@ -9,22 +9,24 @@ const setupInput = function() {
 
 const handleUserInput = function(key) {
   // your code here
-  // When client presses Ctrl+C (SIGINT) to exit node
-  process.on("SIGINT", () => {
-    console.log("bye bye");
-    process.exit();
-  });
-
-  if (key === 'w') { // letters, numbers, symbols but not arrow keys
+  if (key === 'w') {
     console.log("Move: up");
   }
-
-  if (key && key.name === "c" && key.ctrl) {
-    console.log("bye bye");
-    process.exit();
+  if (key === 'a') {
+    console.log("Move: left");
   }
-
-  console.log(`You pressed the button: ${key}`);
+  if (key === 's') {
+    console.log("Move: down");
+  }
+  if (key === 'd') {
+    console.log("Move: right");
+  }
+  if (key === '\u0003') {
+    console.log("exiting");
+    process.exit(); // Ctrl+C to exit
+  }
+ 
+  //console.log(`You pressed the button: ${key}`);
 
 };
 
