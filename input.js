@@ -1,3 +1,4 @@
+const { IP, PORT } = require("./constants");
 let connection;
 
 const setupInput = (conn) => {
@@ -30,9 +31,11 @@ const handleUserInput = function(key) {
   }
   if (key === '1') { //SPECIAL KEYS #1
     console.log("Sssssslaayy");
+    connection.write("Say: Ssslay");
   }
   if (key === '2') { //SPECIAL KEYS #2
-    console.log("That's  sss-spectacular!");
+    console.log("Ss-plendid");
+    connection.write("Say: Ss-plendid");
   }
 
   if (key === '\u0003') {
