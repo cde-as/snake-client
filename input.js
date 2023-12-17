@@ -28,6 +28,13 @@ const handleUserInput = function(key) {
     console.log("Move: right");
     connection.write("Move: right");
   }
+  if (key === '1') { //SPECIAL KEYS #1
+    console.log("Sssssslaayy");
+  }
+  if (key === '2') { //SPECIAL KEYS #2
+    console.log("That's  sss-spectacular!");
+  }
+
   if (key === '\u0003') {
     console.log("exiting");
     process.exit(); // Ctrl+C to exit
